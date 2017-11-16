@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        Loaded="Window_Loaded"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" >
+            <Button Width="100" HorizontalAlignment="Left" Click="Button_Click_1">Carica</Button>
+            <Button Width="100" HorizontalAlignment="Left" Click="Button_Click_2">Salva</Button>
+            <Button Width="100" HorizontalAlignment="Left" Click="Button_Click">Filtra</Button>
+
+            <ComboBox Width="100" Name="cboxAnni"></ComboBox>
+            <Button Width="100" HorizontalAlignment="Left" Click="Button_Click_3">Genera</Button>
+
+        </StackPanel>
+        <DataGrid  Grid.Row="1" Name="dgDati"></DataGrid>       
+    </Grid>
+</Window>
