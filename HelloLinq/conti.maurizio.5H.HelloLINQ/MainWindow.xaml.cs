@@ -13,20 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace conti.maurizio._5H.HelloLINQ
 {
     /// <summary>
     /// Logica di interazione per MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        Persone persone;
+        Persone persone { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             try
@@ -49,8 +48,8 @@ namespace WpfApp1
             int anno = (int)cboxAnni.SelectedValue;
 
             var filtrate = (from p in persone
-                           where p.Data.Year == anno
-                           select p).OrderBy( p=>p.Data );
+                            where p.Data.Year == anno
+                            select p).OrderBy(p => p.Data);
 
             dgDati.ItemsSource = filtrate;
         }
@@ -76,7 +75,6 @@ namespace WpfApp1
 
             cboxAnni.ItemsSource = anni;
             cboxAnni.SelectedIndex = 0;
-
         }
     }
 }

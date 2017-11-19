@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WpfApp1
+namespace conti.maurizio._5H.HelloLINQ
 {
     /// <summary>
     /// Logica di interazione per App.xaml

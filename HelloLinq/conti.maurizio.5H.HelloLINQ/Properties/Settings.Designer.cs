@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfApp1.Properties
+namespace conti.maurizio._5H.HelloLINQ.Properties
 {
 
 
