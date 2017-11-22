@@ -15,7 +15,7 @@ namespace conti.maurizio._5H.HelloLINQ
         // Si possono fare i field interni privati ... 
         private String _nome;
         private String _cognome;
-        private DateTime _data;
+        private DateTime _data = DateTime.Now;
 
         // ...e dichiarare in modo veloce l'accessor.
         public string Nome { get => _nome; set => _nome = value; }
@@ -49,7 +49,7 @@ namespace conti.maurizio._5H.HelloLINQ
         {
             // Tip!
             // Se le colonne sono sbagliate è giusto sollevare 
-            // eccezioni che verranno poi gentite dal chiamante...
+            // eccezioni che verranno poi gestite dal chiamante...
             string[] colonne = riga.Split(';');
             Nome = colonne[0];
             Cognome = colonne[1];
