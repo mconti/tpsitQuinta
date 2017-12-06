@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace conti.maurizio._5H.HelloLINQ
 {
+
+    public enum TipoPosizione { NonValida, Mare, Montagna, Centro }
+
     public class Persona
     {
         // Tip!
@@ -16,6 +19,8 @@ namespace conti.maurizio._5H.HelloLINQ
         private String _nome;
         private String _cognome;
         private DateTime _data = DateTime.Now;
+
+        public TipoPosizione Posizione { get; set; }
 
         // ...e dichiarare in modo veloce l'accessor.
         public string Nome { get => _nome; set => _nome = value; }
@@ -30,6 +35,7 @@ namespace conti.maurizio._5H.HelloLINQ
             //
             // Indispensabile per garantire la sequenza 
             // di inizializzazione delle variabili interne alla classe.
+            Posizione = TipoPosizione.Montagna;
         }
         public Persona(int val)
         {
