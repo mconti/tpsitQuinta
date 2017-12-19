@@ -1,0 +1,6 @@
+Caffetteria;Caffe;3
+Caffetteria;Cappuccio;2
+Caffetteria;Torta;13
+Torte;Sacker;17
+Torte;Carote;26
+Torte;Frutta;6
