@@ -1,0 +1,24 @@
+﻿@model Prodotti
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    @foreach (var p in @Model)
+    {
+        Caffetteria c = p as Caffetteria;
+        if (c != null)
+        {
+            <tr><td>@c.TipoCaff</td><td>@c.prezzo</td></tr>
+        }
+        else
+        {
+            Torta t = p as Torta;
+            <tr><td>@t.TipoTorta</td><td>@t.prezzo</td></tr>
+
+        }
+    }
+
+</table>

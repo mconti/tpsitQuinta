@@ -39,13 +39,9 @@ namespace ProdottiBar
         public Caffetteria(string s)
         {
             string[] dati = s.Split(';');
-            try
-            {
-                pt = prodottoType.Caffetteria;
-                ct = (caffetteriaType)Enum.Parse(typeof(caffetteriaType), dati[1]);
-                p = Convert.ToDouble(dati[2]);
-            }
-            catch { }
+            pt = prodottoType.Caffetteria;
+            ct = (caffetteriaType)Enum.Parse(typeof(caffetteriaType), dati[1]);
+            p = Convert.ToDouble(dati[2]);
         }
 
         public override double prezzo()
@@ -54,7 +50,7 @@ namespace ProdottiBar
         }
         public override string info()
         {
-            return pt.ToString()+";"+ct.ToString()+";"+p+"\n";
+            return pt.ToString() + ";" + ct.ToString() + ";" + p + "\n";
         }
 
     }
@@ -86,7 +82,7 @@ namespace ProdottiBar
         }
         public override string info()
         {
-            return pt.ToString() + ";" + tt.ToString() + ";" + pKg + ";"+peso+"\n";
+            return pt.ToString() + ";" + tt.ToString() + ";" + pKg + ";" + peso + "\n";
         }
 
 
@@ -124,8 +120,7 @@ namespace ProdottiBar
         public prodotto dammi(string s) {
 
             // Se ciò che ha scritto l'utente
-            // esiste nell'insieme dei nomi dell'Enum 
-            // caffetteriaType allora entra
+            // esiste nell'insieme dei nomi dell'Enum caffetteriaType allora entra
             if (Enum.IsDefined(typeof(caffetteriaType), s)) {
 
                 var soloCaffetteria = 
@@ -139,12 +134,10 @@ namespace ProdottiBar
                         return c;
                     }
                 }
-
             }
 
             // Se ciò che ha scritto l'utente
-            // esiste nell'insieme dei nomi dell'Enum 
-            // tortaType allora entra
+            // esiste nell'insieme dei nomi dell'Enum tortaType allora entra
             if (Enum.IsDefined(typeof(tortaType), s))
             {
                 var soloLeTorte = 
@@ -175,6 +168,7 @@ namespace ProdottiBar
             {
                 Add(p);
             }
+
         }
 
         public string stampa()

@@ -11,7 +11,7 @@ namespace ProdottiBar
     {
         static void Main(string[] args)
         {
-            stampaListino("listino.txt");
+            //stampaListino("listino.txt");
 
             ListaProdotti ls = new ListaProdotti("listino.txt");
             Console.WriteLine(ls.stampa());
